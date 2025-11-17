@@ -1,5 +1,7 @@
 console.log("Hello world");
 
+console.log("Бодлого 1-р хэсэг");
+
 // Бодлого 1.
 let x = 5;
 
