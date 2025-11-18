@@ -54,15 +54,13 @@ console.log(ug.toUpperCase());
 
 // Bodlogo 8.
 
-a = 5;
-con1 = a / 3;
-con2 = a / 5;
+a = 20;
 
-if (con1) {
+if (a % 3 === 0) {
   console.log("fizz");
-} else if (con2) {
+} else if (a % 5 === 0) {
   console.log("buzz");
-} else if (con1 && con2) {
+} else if (a % 3 === 0 && a % 5 === 0) {
   console.log("fizzbuzz");
 }
 
@@ -161,7 +159,7 @@ if (a === b) {
   console.log("өөр");
 }
 
-// Bodlogo 18.
+// Bodlogo 18. bolohgui bgaa
 
 x = 25;
 a /= Math.floor(x / 10);
@@ -181,9 +179,8 @@ if (a < 0) a = -a;
 
 // Bodlogo 20.
 
-const a = new Date("1970.01.01");
-
-const b = new Date("2025.11.18");
+a = new Date("1970.01.01");
+b = new Date("2025.11.18");
 const diff = b - a;
 sec = diff / 1000;
 
