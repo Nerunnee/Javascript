@@ -136,9 +136,9 @@ console.log("Bodlogo 19.", num);
 // Bodlogo 20.
 
 num = ["100", "200", "300"];
-num = num.includes("200");
+includes = num.includes("200");
 
-if (num.includes("200")) {
+if (includes) {
   console.log("Bodlogo 20.", "baina");
 } else {
   console.log("Bodlogo 20.", "baihgui");
