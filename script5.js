@@ -187,3 +187,12 @@ sec = diff / 1000;
 console.log(sec);
 
 // Bodlogo 21.
+
+a = 1;
+b = a % 10;
+
+console.log(b);
+
+// if (a === 0 && a ==== 5) {
+//   console.log("5");
+// }
