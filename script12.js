@@ -91,22 +91,33 @@ function startGame() {
   //   }
   // }
 
-  for (let i = 0; true; i++) {
+  for (let i = 1; i < 6; i++) {
     value = Number(prompt("Too oruul"));
+    let oroldlogo = i;
+
     if (value === 0) break;
     if (randomNumber > value) {
-      console.log(`${randomNumber} нь ${value}-аас их байна.`);
-      continue;
+      console.log(
+        `Оролдлого ${oroldlogo}: ${randomNumber} нь ${value}-аас их байна.`
+      );
     }
     if (randomNumber < value) {
-      console.log(`${randomNumber} нь ${value}-аас бага байна.`);
-      continue;
+      console.log(
+        `Оролдлого ${oroldlogo}: ${randomNumber} нь ${value}-аас бага байна.`
+      );
     }
+
     if (randomNumber === value) {
       console.log(
-        `${randomNumber} , ${value} тэнцүү байна. 🎉 Баяр хүргэе! Та Зөв таалаа!`
+        `${randomNumber} , ${value} тэнцүү байна. 🎉 Баяр хүргэе! Та Зөв таалаа! Нийт оролдлого: ${oroldlogo}`
       );
       break;
+    }
+
+    if (oroldlogo === 5) {
+      console.log(
+        `Та нийт ${oroldlogo} оролдлого хийснээр тоглоом дууслаа. ☹️ Та дахин оролдоно уу?`
+      );
     }
   }
 }
