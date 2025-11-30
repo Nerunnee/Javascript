@@ -71,8 +71,9 @@
 // }
 
 function startGame() {
-  const randomNumber = Math.floor(Math.random() * 10) + 1;
-  let value;
+  const inputNumber = [];
+
+  const inputString = [];
 
   // while (true) {
   //   value = Number(prompt("Too oruul"));
@@ -92,15 +93,29 @@ function startGame() {
   // }
 
   for (let i = 1; i < 6; i++) {
+    const randomNumber = Math.floor(Math.random() * 10) + 1;
+
     value = Number(prompt("Too oruul"));
     let oroldlogo = i;
 
     if (value === 0) break;
+
+    if (!value) {
+      alert("Та зөвхөн тоо оруулна уу?");
+    }
+
+    if (inputNumber.includes(value)) {
+      alert("Давтагдсан тоо байна, Та аөр тоо оруулна уу?");
+    }
+
+    inputNumber.push(value);
+
     if (randomNumber > value) {
       console.log(
         `Оролдлого ${oroldlogo}: ${randomNumber} нь ${value}-аас их байна.`
       );
     }
+
     if (randomNumber < value) {
       console.log(
         `Оролдлого ${oroldlogo}: ${randomNumber} нь ${value}-аас бага байна.`
@@ -115,11 +130,13 @@ function startGame() {
     }
 
     if (oroldlogo === 5) {
-      console.log(
+      alert(
         `Та нийт ${oroldlogo} оролдлого хийснээр тоглоом дууслаа. ☹️ Та дахин оролдоно уу?`
       );
     }
   }
+
+  console.log("Таны нийт оруулсан тоонууд:", inputNumber);
 }
 
 startGame();
